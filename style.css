@@ -1,0 +1,202 @@
+:root{
+    --primary-Moderate-violet: hsl(263, 55%, 52%);
+    --primary-Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --primary-Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --primary-White: hsl(0, 0%, 100%);
+    --nutral-Light-gray: hsl(0, 0%, 81%);
+    --nutral-Light-grayish-blue: hsl(210, 46%, 95%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+html,
+body,h1,h2,p,img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+    background-color: var(--nutral-Light-grayish-blue);   
+}
+
+main {
+    width: 90%;
+    padding: 20px 0;
+    margin: auto;
+}
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit min-max(250px, 1fr)) ;
+    grid-auto-rows: auto;
+    gap: 2em;
+}
+.head img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid hsla(263, 39%, 57%, 1);
+}
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 30px 30px;
+    /* color: var(--primary-White); */
+    font-size: 13px;
+    color: white;
+    box-shadow: 150px 15px 50px  rgba(0,0,0,.1);
+    
+}
+.head {
+    display: flex;
+    /* padding-bottom: 1.3rem; */
+    font-size: .625rem;
+}
+h2 {
+    font-size: 1.113rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    line-height: 1.3;
+    opacity: 95%;
+    
+}
+
+span:nth-child(3){
+    color: var(--nutral-Light-gray);
+    opacity: 50%;
+    font-size: .781rem;
+}
+ .card span{
+    color: var(--nutral-Light-grayish-blue);
+    font-weight: lighter;
+    font-size: .938rem;
+    padding-left: 1rem;
+
+}
+
+p{
+    color: var(--primary-White);
+    opacity: 70%;
+    font-size:.813rem;
+    line-height: 1.5;
+   
+    
+}
+.card__jeanette h2{
+    color: var(--primary-Very-dark-grayish-blue);
+}
+.card__kira h2 {
+    color: var(--primary-Very-dark-grayish-blue);
+}
+#wtf {
+    color: var(--primary-Very-dark-grayish-blue);
+
+}
+
+.card:nth-child(1) {
+    background: var(--primary-Moderate-violet) url('./images/bg-pattern-quotation.svg') no-repeat 12.438rem -2px;
+    background-size: 7.5rem;
+}
+.card:nth-child(2){
+    background: var(--primary-Very-dark-grayish-blue);
+}
+.card:nth-child(3){
+    background: var(--primary-White);
+}
+.card:nth-child(4){
+    background: var(--primary-Very-dark-blackish-blue);
+}
+.card:nth-child(5){
+    background: var(--primary-White);  
+}
+.attribution a:nth-child(2){
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    font-style: italic;
+    
+}
+.attribution {
+    padding-top: 1rem;
+}
+@media (min-width: 768px) and (max-width:1024px) {
+    
+    .card:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-size: 90px;
+    }
+    .card:nth-child(2){
+        grid-column: 3;
+        grid-row: 1;  
+    }
+    .card:nth-child(3){
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .card:nth-child(4){
+        grid-column: 3;
+        grid-row: 2/4;
+    }
+    .card:nth-child(5){
+        grid-column: 1/4;
+    }
+}
+@media (min-width: 1025px) and (max-width: 4320px) {
+    main {
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+    }
+    .card {
+        padding-bottom: 1rem;
+    }
+    .grid__container {
+        display: grid;
+        gap:1.5rem;
+        grid-auto-rows:auto;
+        grid-template-columns:repeat(auto-fit,minmax(auto, 1fr) );
+    }
+    #md__text {
+        font-size: 18.9px;
+    }
+    .card {
+        padding:20px;
+    }
+    .card__daniel {
+        grid-column: 1/3;
+    }
+    .card__patrick {
+        grid-column:2/4 ;
+    }
+    .card__kira {
+        grid-column: 4/4;
+        grid-row: 1/3;
+    }
+    .card__jonathan {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .card__jeanette{
+        grid-column: 1;
+    }
+    .card__jeanette #md__text {
+        font-size: 25px;
+        line-height: 1.1;  
+    }
+    .card{
+        padding: 2rem 2.5rem;
+    }
+    .card p {
+        font-size: .81rem;
+    }
+    .card__kira #wtf {
+        line-height: 1.9;
+    }
+    .card:nth-child(1) {
+        background: var(--primary-Moderate-violet) url('./images/bg-pattern-quotation.svg') no-repeat 407px -2px;
+        background-size: 115px 125px;
+    }
+}
